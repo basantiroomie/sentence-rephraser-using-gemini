@@ -77,7 +77,7 @@ document.getElementById('rephraseButton').addEventListener('click', async functi
     };
   
     // Construct the request URL with your API key
-    const apiKey = 'AIzaSyCDPrTwQbpxB4M3FSCGiKs1YgpYQnMVyXY'; // Replace with your actual Gemini API key
+    const apiKey = 'YOUR_API_KEY'; // Replace with your actual Gemini API key
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
   
     try {

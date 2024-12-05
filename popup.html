@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rephrase Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Rephrase Your Sentence</h1>
+      
+      <!-- Tone selection dropdown -->
+      <select id="toneSelect">
+        <option value="professional">Professional</option>
+        <option value="polite">Polite</option>
+        <option value="romantic">Romantic</option>
+        <option value="friendly">Friendly</option>
+        <option value="assertive">Assertive</option>
+        <option value="sympathetic">Sympathetic</option>
+        <option value="casual">Casual</option>
+        <option value="optimistic">Optimistic</option>
+        <option value="direct">Direct</option>
+        <option value="motivational">Motivational</option>
+        <option value="empathetic">Empathetic</option>
+        <option value="formal">Formal</option>
+        <option value="inquisitive">Inquisitive</option>
+        <option value="encouraging">Encouraging</option>
+        <option value="reassuring">Reassuring</option>
+      </select>
+      
+      <!-- Input text area for user sentence -->
+      <textarea id="inputSentence" placeholder="Enter your sentence here..."></textarea>
+      
+      <!-- Button to trigger rephrasing -->
+      <button id="rephraseButton">Rephrase</button>
+      
+      <!-- Output text area for displaying rephrased sentence -->
+      <textarea id="outputSentence" readonly placeholder="Rephrased sentence will appear here..."></textarea>
+    </div>
+
+    <!-- Link to the JavaScript file that handles rephrasing -->
+    <script src="popup.js"></script>
+  </body>
+</html>

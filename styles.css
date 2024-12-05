@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 10px;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  select,
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

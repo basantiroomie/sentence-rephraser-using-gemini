@@ -37,3 +37,23 @@ To get started, clone the repository to your local machine:
 
 ```bash
 https://github.com/basantiroomie/sentence-rephraser-using-gemini.git
+```
+
+### 2. Running as a Chrome Extension
+
+To load the code as a Chrome Extension:
+
+1. Go to the Chrome browser and open `chrome://extensions/`.
+2. Enable "Developer mode" in the top right.
+3. Click on "Load unpacked" and select the folder containing `index.html` and `popup.js`.
+4. The extension should now be available in your browser's extension toolbar.
+
+## How It Works
+
+1. **User Input**: The user enters a sentence in the "Enter your sentence here..." text area.
+2. **Tone Selection**: The user selects a tone from the dropdown menu.
+3. **Rephrase Request**: The user clicks the "Rephrase" button to send a request to the Gemini API.
+4. **API Call**: The extension sends the request to the Gemini API with the selected tone and the sentence to be rephrased.
+5. **Response**: The Gemini API responds with a rephrased sentence.
+6. **Display Output**: The rephrased sentence is displayed in the "Rephrased sentence will appear here..." text area.
+

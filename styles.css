@@ -1,37 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    width: 300px;
-    padding: 10px;
+  font-family: Arial, sans-serif;
+  background: #2d2d2d; /* Dark grey background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; 
+}
+
+#app {
+  background: linear-gradient(135deg, #202020, #212121); /* Darker grey gradient for the app container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: transparent; /* Gradient text effect */
+  background: linear-gradient(to right, white, #ffc0cb, #d8bfd8); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Slight glow */
+}
+
+
+textarea, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #999; /* Lighter grey border */
+  background: #363636; /* Neutral grey background */
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea, select {
+  position: relative;
+  z-index: 1; /* Ensure the glow appears behind */
+}
+
+textarea:focus, select:focus {
+  outline: none;
+  border: none;
+  background: #424242; 
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 20px rgba(255, 182, 193, 0.4),
+    0 0 30px rgba(255, 192, 203, 0.4);
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+#outputSentence {
+  background-color: #363636; /* Output area background */
+  color: transparent;
+  background: linear-gradient(to right, white, #ffffff, #ffffff); /* Gradient for text */
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Rephrase Button */
+button {
+  background: linear-gradient(135deg, #585858, #585858); /* Blue gradient for the button */
+  color: white; /* Initial text color */
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Hover effect for the button */
+button:hover {
+  background: linear-gradient(to right, white, #ffb6c1); 
+  color: #2d2d2d; 
+  animation: lightUp 1.5s infinite; /* Subtle glowing effect */
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.5), 
+    0 0 25px rgba(255, 192, 203, 0.5), 
+    0 0 35px rgba(255, 182, 193, 0.5); /* Glow effect */
+}
+
+/* Button clicked/active state */
+button:active {
+  background: linear-gradient(to right, white, #ffb6c1); 
+  color: #363636;
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.8), 
+    0 0 25px rgba(255, 182, 193, 0.8), 
+    0 0 35px rgba(255, 192, 203, 0.8);
+}
+
+
+/* Wrapper styles */
+.wrapper .icon:hover {
+  background: linear-gradient(to right, white, #ffc0cb); /* Gradient glow */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5), 
+    0 0 20px rgba(255, 192, 203, 0.5), 
+    0 0 30px rgba(255, 182, 193, 0.5);
+}
+
+.wrapper .icon:hover .tooltip {
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.5), 
+    0 0 15px rgba(255, 192, 203, 0.5), 
+    0 0 20px rgba(255, 182, 193, 0.5);
+}
+
+/* Light-up keyframe animation */
+@keyframes lightUp {
+  0% {
+    box-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.4), 
+      0 0 20px rgba(255, 192, 203, 0.4), 
+      0 0 30px rgba(255, 182, 193, 0.4);
   }
-  
-  #app {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  50% {
+    box-shadow: 
+      0 0 20px rgba(255, 192, 203, 0.6), 
+      0 0 30px rgba(255, 182, 193, 0.6), 
+      0 0 40px rgba(255, 255, 255, 0.6);
   }
-  
-  select,
-  textarea,
-  button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+  100% {
+    box-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.4), 
+      0 0 20px rgba(255, 192, 203, 0.4), 
+      0 0 30px rgba(255, 182, 193, 0.4);
   }
-  
-  textarea {
-    height: 80px;
-    resize: none;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+}
